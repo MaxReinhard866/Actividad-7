@@ -28,7 +28,7 @@ void Leer(){
 	Estudiante estudiante;
 	int id=0; // indice o pocision del registro(fila) dentro del archivo
 	fread(&estudiante,sizeof(Estudiante),1,archivo);
-	cout<<"___________________________________________________"<<endl;
+	cout<<"____________________________"<<endl;
 	cout<<"ID"<<"|"<<"Codigo"<<"|"<<"   Nombres  "<<"|"<<"   Apellidos   "<<"|"<<" Telefono"<<endl;
 	do{
 		cout<<id<<"|"<<estudiante.codigo<<"|"<<estudiante.nombres<<"|"<<estudiante.apellidos<<"|"<<estudiante.telefono<<endl;
@@ -118,13 +118,7 @@ void Borrar(){
 	fclose(archivo_temp);
 	Leer();
 }
-/*
- 
- 
- Otros ejemplos para busqueda por medio de codigo indice etc
- 
- 
- */
+
 void buscar_codigo(){
 		FILE* archivo = fopen(nombre_archivo,"rb");	
 	int pos=0,indice=0,cod=0;
@@ -155,7 +149,7 @@ void buscar_indice(){
 	int pos=0;
 	cout<<"Que registro desea ver: ";
 	cin>>pos;
-	cout<<"------------------ "<<pos<<" ------------------"<<endl;
+	cout<<"-------- "<<pos<<" --------"<<endl;
 	fseek ( archivo,pos * sizeof(Estudiante), SEEK_SET );
 	
 	Estudiante estudiante;
